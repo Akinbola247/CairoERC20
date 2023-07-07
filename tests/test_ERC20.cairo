@@ -1,4 +1,3 @@
-use simple_contract::contract::ERC20;
 use array::ArrayTrait;
 use result::ResultTrait;
 use traits::Into;
@@ -13,7 +12,7 @@ let mut calldata = ArrayTrait::new();
 calldata.append(name);
 calldata.append(symbol);
 calldata.append(18);
-let address = deploy_contract('simple_contract', @calldata).unwrap();
+let address = deploy_contract('ERC20', @calldata).unwrap();
 return address;
 }
 
